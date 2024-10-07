@@ -6,12 +6,18 @@ This repository contains an AppleScript designed to restart Universal Control on
 
 Universal Control is an incredibly useful feature, but it is prone to dropping out. This script provides a quick and easy way to restart it without needing to do it manually.
 
-## Usage
+## Setup
 
 1. Download the script file `restart-universal-control.scpt`
 1. Open it in Apple's Script Editor app
 1. File > Export to save it as an Application
 1. On first run, you will need to grant the app permission to control your computer. This is required to allow the app to restart Universal Control. You find this setting in `System Settings > Privacy & Security > Accessibility` then toggle the app's name.
+
+## Usage
+
+I'm finding it quickest to simply use Spotlight (cmd+space) to search and run the restart: 
+
+![Spotlight search](example.jpg)
 
 ## Alternatives
 
