@@ -8,7 +8,7 @@ Universal Control is an incredibly useful feature, but it is prone to dropping o
 
 ## Setup
 
-1. Download the script file `restart-universal-control.scpt`
+1. Download the script file `restart-universal-control.scpt` [here](https://raw.githubusercontent.com/nathanbirrell/macos-restart-universal-control/refs/heads/main/restart-universal-control.scpt).
 1. Open it in Apple's Script Editor app
 1. File > Export to save it as an Application
 1. On first run, you will need to grant the app permission to control your computer. This is required to allow the app to restart Universal Control. You find this setting in `System Settings > Privacy & Security > Accessibility` then toggle the app's name.
