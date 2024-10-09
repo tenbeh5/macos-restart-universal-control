@@ -3,7 +3,7 @@ tell application "System Settings"
 end tell
 
 -- Wait for the System Settings window to open
-delay 1
+delay 0.2
 
 tell application "System Events"
 	tell process "System Settings"
@@ -16,9 +16,7 @@ tell application "System Events"
 		end try
 		
 		-- Wait for the Displays window to load
-		delay 1
-		
-		
+		delay 0.5
 		
 		-- Click the "Advanced…" button, if available
 		try
@@ -30,18 +28,18 @@ tell application "System Events"
 		end try
 		
 		-- Wait for the Advanced settings to appear
-		delay 1
+		delay 0.5
 		
 		-- Toggle the checkbox for "Allow your pointer and keyboard to move between any nearby Mac or iPad"
 		try
 			set pointerSetting to checkbox "Allow your pointer and keyboard to move between any nearby Mac or iPad" of group 2 of scroll area 1 of group 1 of sheet 1 of window 1
 			if (value of pointerSetting as boolean) is true then
 				click pointerSetting -- Turn it off
-				delay 1
+				delay 0.2
 				click pointerSetting -- Turn it back on
 			else
 				click pointerSetting -- Turn it on
-				delay 1
+				delay 0.2
 				click pointerSetting -- Turn it off and then back on
 				click pointerSetting
 			end if
@@ -54,6 +52,6 @@ tell application "System Events"
 	key code 53
 end tell
 
-delay 1
+delay 0.2
 
 quit application "System Settings"
