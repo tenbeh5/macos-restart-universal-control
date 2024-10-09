@@ -1,3 +1,26 @@
+-- Function to check assistive access
+on isAssistiveAccessEnabled()
+	set appName to "Restart Universal Control" -- Replace with the name of your application
+	set accessibilityEnabled to false
+	
+	try
+		set accessibilityEnabled to (do shell script "osascript -e 'tell application \"System Events\" to get the name of every process whose background only is false'") contains appName
+	end try
+	
+	return accessibilityEnabled
+end isAssistiveAccessEnabled
+
+-- Main script
+if not isAssistiveAccessEnabled() then
+	display dialog "This script requires assistive access. Please enable it in System Preferences." buttons {"OK"} default button "OK"
+	
+	tell application "System Settings"
+		activate
+		set current pane to pane id "com.apple.preference.universalaccess"
+	end tell
+end if
+
+
 tell application "System Settings"
 	activate
 end tell
