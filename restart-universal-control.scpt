@@ -12,11 +12,12 @@ end isAssistiveAccessEnabled
 
 -- Main script
 if not isAssistiveAccessEnabled() then
+	(*
 	display dialog "This script requires assistive access. Please enable it in System Preferences." buttons {"OK"} default button "OK"
-	
+*)
 	tell application "System Settings"
 		activate
-		set current pane to pane id "com.apple.preference.universalaccess"
+		set CurrentPane to id of "com.apple.preference.universalaccess"
 	end tell
 end if
 
