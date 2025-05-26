@@ -47,7 +47,7 @@ retrying("
 				click button \"Displays\" of scroll area 1 of window 1
 			end try
 			
-			delay 0.5
+			delay 1
 			
 			-- Click the Advanced button
 			try
